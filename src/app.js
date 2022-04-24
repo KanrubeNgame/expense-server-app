@@ -15,6 +15,10 @@ dbConnect();
 //middlewares
 app.use(express.json());
 
+app.get('/',(req, res)=>{
+    res.json({msg:'Welcome to Expense Tracker API'});
+});
+
 //routes
 app.use("/api/users",userRoute);
 
