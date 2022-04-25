@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-
 //Schema
 const incomeSchema = mongoose.Schema({
     title:{
@@ -24,9 +23,8 @@ const incomeSchema = mongoose.Schema({
         ref: "User",
         require: [true, "User ID is required"],
     }
-},
-{
-    timestamp: true,
+},{
+    Timestamp: true,
 }
 );
  const Income = mongoose.model("Income", incomeSchema);
