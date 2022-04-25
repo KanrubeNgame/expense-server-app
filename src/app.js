@@ -5,6 +5,7 @@ const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
 
 const userRoute = require('./routes/users/usersRoute');
 const incomeRoute = require('./routes/income/incomeRoutes');
+const expenseRoute = require('./routes/income/expenseRoutes');
 
 const app =express();
 //env 
@@ -26,6 +27,8 @@ app.use("/api/users",userRoute);
 //income route
 app.use("/api/income", incomeRoute);
 
+//expense route
+app.use("/api/expenses",expenseRoute);
 //Error
 app.use(notFound);
 app.use(errorHandler);

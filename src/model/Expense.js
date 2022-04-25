@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 //Schema
-const incomeSchema = mongoose.Schema({
+const expenseSchema = mongoose.Schema({
     title:{
         require: [true, 'Title is required'],
         type: String,
@@ -12,7 +12,7 @@ const incomeSchema = mongoose.Schema({
     },
     type:{
         type: String,
-        default: "income",
+        default: "expense",
     },
    amount:{
         require: [true, 'Amount is required'],
@@ -23,9 +23,10 @@ const incomeSchema = mongoose.Schema({
         ref: "User",
         require: [true, "User ID is required"],
     }
-},{
-    timestamp: true,
-}
+},
+    {
+        timestamp: true,
+    }
 );
- const Income = mongoose.model("Income", incomeSchema);
- module.exports = Income;
+ const Expense = mongoose.model("Expense",expenseSchema);
+ module.exports = Expense;
