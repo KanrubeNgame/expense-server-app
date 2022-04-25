@@ -1,6 +1,6 @@
 const express = require('express');
 
-const {createExpCtrl, fetchAllExpCtrl, fetchExpDetailsInCtrl,updateExpCtrl,deleteExpCtrl} = require('../../controllers/income/expenseCtrl');
+const {createExpCtrl, fetchAllExpCtrl, fetchExpDetailsInCtrl,updateExpCtrl,deleteExpCtrl} = require('../../controllers/expenses/expenseCtrl');
 
 
 const expenseRoute = express.Router();

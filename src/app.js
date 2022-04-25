@@ -5,7 +5,7 @@ const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
 
 const userRoute = require('./routes/users/usersRoute');
 const incomeRoute = require('./routes/income/incomeRoutes');
-const expenseRoute = require('./routes/income/expenseRoutes');
+const expenseRoute = require('./routes/expenses/expenseRoutes');
 
 const app =express();
 //env 
